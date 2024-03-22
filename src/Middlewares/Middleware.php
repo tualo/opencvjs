@@ -8,7 +8,7 @@ class Middleware implements IMiddleware{
     public static function register(){
         TualoApplication::use('opencvjs',function(){
             try{
-                TualoApplication::javascript('opencvjs', './opencvjs/lib/opencv.js',[],-10000);
+                TualoApplication::javascript('opencvjs', './opencvjs/lib/opencv.js',[],-90000);
             }catch(\Exception $e){
                 TualoApplication::set('maintanceMode','on');
                 TualoApplication::addError($e->getMessage());
